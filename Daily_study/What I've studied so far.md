@@ -15,17 +15,26 @@
 
 <h2>🎬 Videos</h2>
 
-<h3>Programming with Mosh - Python Tutorial [0:00:00 : 3:38:26]</h3>
+<h3>Python Tutorial - Python for Beginners [Full Course] [2021.10.03]</h3>
 
-<h1>🔎 Algorithm</h1>
+<h1>Algorithm</h1>
 
-<h2>BaekJoon [2021.09.06~]</h2>
+<h2>🔎 BaekJoon [2021.09.06~]</h2>
 
-<h3>86개의 문제</h3>
+<h3>90개의 문제</h3>
 
 <h2>📕 Book</h2>
 
-<h3>Do it! 자료구조와 함께 배우는 알고리즘 입문 : 파이썬 편 [~Chapter 01]</h3>
+
+
+
+
+<h1>And so on</h1>
+
+<h2>📕 Book</h2>
+
+
+
+
 
 <h3>Total learning time[2021.08.31~] : 120h 19m</h3>
-
