@@ -11,11 +11,11 @@
 
 <h4>혼자 공부하는 C언어 [before 2021.09.01]</h4>
 <h4>혼자 공부하는 자바 [before 2021.09.01]</h4>
-<h4>Do it! 점프 투 파이썬 [2021.09.06]</h4>
+<h4>Do it! 점프 투 파이썬 [2021.09.26]</h4>
 
 <h2>🎬 Videos</h2>
 
-<h3>Programming with Mosh - Python Tutorial [0:00:00 : 3:38:26]</h3>
+<h3>Programming with Mosh - Python Tutorial [2021.10.03]</h3>
 
 <h1>🔎 Algorithm</h1>
 
