@@ -9,6 +9,7 @@ public class ChildCasting extends ParentCasting {
 
     }
 
+    @Override
     public void printName() {
         System.out.println("printName() - Child");
     }
