@@ -35,7 +35,7 @@
 
 <h2>🎬 Videos</h2>
 
-<h3>Data Structures and Algorithms for Beginners [21.10.09~]</h3>
+<h3>Data Structures and Algorithms for Beginners [21.10.09~21.10.17]</h3>
 
 # 🍀 Etc
 
