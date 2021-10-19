@@ -10,6 +10,9 @@ public class ListSample {
         sample.checkArrayList3();
         sample.checkArrayList4();
         sample.checkArrayList5();
+        sample.checkArrayList6();
+        sample.checkArrayList7();
+        sample.checkArrayList8();
     }
 
     public void checkArrayList1() {
@@ -85,6 +88,22 @@ public class ListSample {
         String[] strList = list.toArray(tempArray);
         for (String temp : strList) {
             System.out.println(temp);
+        }
+    }
+
+    public void checkArrayList8() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("A");
+//        System.out.println("Removed " + list.remove(0));
+//        System.out.println(list.remove("A"));
+        ArrayList<String> temp = new ArrayList<>();
+        temp.add("A");
+        list.removeAll(temp);
+        for (int loop = 0; loop < list.size(); loop++) {
+            System.out.println("list.get(" + loop + ")=" + list.get(loop));
         }
     }
 }
