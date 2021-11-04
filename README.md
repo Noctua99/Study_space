@@ -37,6 +37,14 @@
 
 <h3>Big O Notation - Full Course [21.10.21~]</h3>
 
+<h1>🖨 WebAndApp</h1>
+
+<h2>📕 Book</h2>
+
+<h3>쉽게 배우는 JSP 웹 프로그래밍 [21.11.03~]</h3>
+
+<h3>Do it! HTML+CSS+자바스크립트 웹 표준의 정석 [21.11.04~]</h3>
+
 # 🍀 Etc
 
 <h2>📕 Book</h2>
