@@ -1,0 +1,6 @@
+.book1{
+  list-style-type: none;  /* 순서 없는 목록 */
+}
+.book2{
+  list-style-type: upper-alpha; /* 알파벳 대문자 목록 */
+}
