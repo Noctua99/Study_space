@@ -1,0 +1,36 @@
+#container{
+  width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+}
+#header{
+  width: 100%;
+  height: 120px;
+  background-color: #acacac;
+  font-size: xx-large;
+  line-height: 120px;
+}
+#left-sidebar{
+  width: 250px;
+  height: 600px;
+  background-color: #e9e9e9;
+  float: left;
+}
+#right-sidebar{
+  width: 150px;
+  height: 600px;
+  background-color: #e9e9e9;
+  float: right;
+}
+#contents{
+  width: 800px;
+  height: 600px;
+  background-color: #f7f7f7;
+  float: left;
+}
+#footer{
+  width: 100%;
+  height: 100px;
+  background-color: #888888;
+  clear: both;
+}
