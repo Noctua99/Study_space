@@ -35,7 +35,7 @@
 
 <h3>Data Structures and Algorithms for Beginners [21.10.09~21.10.17]</h3>
 
-<h3>Big O Notation - Full Course [21.10.21~]</h3>
+<h3>Big O Notation - Full Course [21.10.21~21.11.25]</h3>
 
 <h1>🖨 WebAndApp</h1>
 
@@ -53,5 +53,5 @@
 
 <h3>한 권으로 읽는 컴퓨터 구조와 프로그래밍 [21.10.16~]</h3>
 
-<h3>Total learning time[21.08.31~21.10.31] : 281h 06m</h3>
+<h3>Total learning time[21.08.31~21.11.31] : 377h 35m</h3>
 
