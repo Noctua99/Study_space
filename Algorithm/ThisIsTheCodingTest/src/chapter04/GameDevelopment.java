@@ -3,81 +3,84 @@ package chapter04;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class GameDevelopment {
-    static int h;
-    static int w;
     static int direction;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
+        // N, M을 공백으로 구분하여 입력받기
         st = new StringTokenizer(br.readLine());
-        int height = Integer.parseInt(st.nextToken());
-        int width = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
 
+        // 방문한 위치를 저장하기 위한 맵을 생성하여 0으로 초기화
+        boolean[][] isVisited = new boolean[N][M];
+        // 현재 캐릭터의 X 좌표, Y좌표, 방향을 입력받기
         st = new StringTokenizer(br.readLine());
-        h = Integer.parseInt(st.nextToken());
-        w = Integer.parseInt(st.nextToken());
+        int y = Integer.parseInt(st.nextToken());
+        int x = Integer.parseInt(st.nextToken());
         direction = Integer.parseInt(st.nextToken());
+        isVisited[y][x] = true; // 현재 좌표 방문 처리
 
-        int[][] field = new int[height][width];
-        for (int h = 0; h < height; h++) {
+        // 전체 맵 정보를 입력받기
+        int[][] gameMap = new int[N][M];
+        for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
-            for (int w = 0; w < width; w++) {
-                field[h][w] = Integer.parseInt(st.nextToken());
+            for (int j = 0; j < M; j++) {
+                gameMap[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
-        boolean[][] isVisited = new boolean[height][width];     // 방문여부 확인
-        int visitCount = 0;
-        isVisited[h][w] = true;
-        visitCount++;
+        // 북, 동, 남, 서 방향 정의
+        int[] dy = {-1, 0, 1, 0};
+        int[] dx = {0, 1, 0, -1};
 
+        // 시뮬레이션 시작
+        int count = 1;
+        int turnTime = 0;
         while (true) {
-            int initialH = h;
-            int initialW = w;
-            for (int i = 0; i < 4; i++) {
-                direction--;
-                if (direction < 0) direction += 4;
-                move(direction);
-                System.out.println("move : " + h + " " + w);
-                System.out.println("direction : " + direction);
-                if (h >= height || h < 0 || w >= width || w < 0 || isVisited[h][w] || field[h][w] == 1) {
-                    move(direction - 2);
-                    System.out.println("back : " + h + " " + w);
-                } else {
-                    isVisited[h][w] = true;
-                    System.out.println("육지 도착");
-                    visitCount++;
+            // 왼쪽으로 회전
+            turnLeft();
+            int ny = y + dy[direction];
+            int nx = x + dx[direction];
+            // 회전한 이후 정면에 가보지 않은 칸이 존재하는 경우 이동
+            if (!isVisited[ny][nx] && gameMap[ny][nx] == 0) {
+                isVisited[ny][nx] = true;
+                y = ny;
+                x = nx;
+                count++;
+                turnTime = 0;
+                continue;
+            } else {    // 회전한 이후 정면에 가보지 않은 칸이 없거나 바다인 경우
+                turnTime++;
+            }
+            // 네 방향 모두 갈 수 없는 경우
+            if (turnTime == 4) {
+                ny = y - dy[direction];
+                nx = x - dx[direction];
+                // 뒤로 갈 수 있다면 이동하기
+                if (gameMap[ny][nx] == 0) {
+                    y = ny;
+                    x = nx;
+                } else {    // 뒤가 바다로 막혀있는 경우
                     break;
                 }
-            }
-            if (initialH == h && initialW == w) {
-                move(direction - 2);
-                if (field[h][w] == 1) break;
+                turnTime = 0;
             }
         }
-        System.out.println(visitCount);
+        System.out.println(count);
     }
 
-    public static void move(int direction) {
-        if (direction < 0) direction += 4;
-        switch (direction) {
-            case 0:
-                h--;
-                break;
-            case 1:
-                w++;
-                break;
-            case 2:
-                h++;
-                break;
-            case 3:
-                w--;
-                break;
+    // 왼쪽으로 회전
+    public static void turnLeft() {
+        direction--;
+        if (direction == -1) {
+            direction = 3;
         }
     }
 }

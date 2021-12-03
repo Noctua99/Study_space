@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="EUC-KR">
 <title>Directives Tag</title>
 </head>
 <body>
-	<c:forEach var="k" begin="1" end="10" step="1">
+	<c:forEach var="k" begin="0" end="10" step="2">
 		<c:out value="${k}" />
 	</c:forEach>
 </body>
