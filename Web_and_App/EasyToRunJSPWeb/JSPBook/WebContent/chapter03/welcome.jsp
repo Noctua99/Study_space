@@ -8,7 +8,7 @@
 <title>Welcome</title>
 </head>
 <body>
-	<%@ include file="menu.jsp" %>
+	<%@ include file="menu.jsp"%>
 	<%!String greeting = "웹 쇼핑몰에 오신 것을 환영합니다";
 	String tagline = "Welcome to Web Market!";%>
 	<div class="jumbotron">
@@ -22,6 +22,7 @@
 		<div class="text-center">
 			<h3><%=tagline%></h3>
 			<%
+			response.setIntHeader("Refresh", 1);
 			LocalTime now = LocalTime.now();
 			String am_pm;
 			int hour = now.getHour();
@@ -38,6 +39,6 @@
 			%>
 		</div>
 	</div>
-	<%@ include file="footer.jsp" %>
+	<%@ include file="footer.jsp"%>
 </body>
 </html>

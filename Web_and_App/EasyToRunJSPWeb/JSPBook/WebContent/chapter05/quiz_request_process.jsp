@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+전송된 요청 파라미터 : 
+	<%=request.getQueryString()%>
 </body>
 </html>
