@@ -5,17 +5,17 @@ public class DFS_example {
     static boolean[] visited = new boolean[9];
 
     public static void main(String[] args) {
-        DFS(1);
+        dfs(1);
     }
 
-    public static void DFS(int v) {
+    public static void dfs(int v) {
         // 현재 노드를 방문 처리
         visited[v] = true;
         System.out.println(v + " ");
         // 현재 노드와 연결된 다른 노드를 재귀적으로 방문
         for (int i : graph[v]) {
             if (!visited[i]) {
-                DFS(i);
+                dfs(i);
             }
         }
     }
