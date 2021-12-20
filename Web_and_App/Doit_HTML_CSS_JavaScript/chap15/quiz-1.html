@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 1</title>
+</head>
+
+<body>
+	<script>
+		let x = parseInt(prompt("숫자를 입력해주세요: "));
+		let y = parseInt(prompt("숫자를 입력해주세요: "));
+
+		console.log(sumMulti(x, y));
+
+		function sumMulti(x, y) {
+			if (x === y) {
+				return x * y
+			} else {
+				return x + y
+			}
+		}
+	</script>
+</body>
+
+</html>

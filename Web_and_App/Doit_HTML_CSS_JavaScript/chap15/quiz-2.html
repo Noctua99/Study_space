@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 2</title>
+</head>
+
+<body>
+	<script>
+		function maxAlert(x, y) {
+			if (x > y) {
+				alert(x + "(이)가 " + y + "보다 큽니다.");
+			} else if (x < y) {
+				alert(y + "(이)가 " + x + "보다 큽니다.");
+			} else {
+				return "같습니다."
+			}
+		}
+
+		let num1 = parseInt(prompt("비교할 첫 번째 숫자:"));
+		let num2 = parseInt(prompt("비교할 두 번째 숫자:"));
+
+		maxAlert(num1, num2);
+	</script>
+</body>
+
+</html>
