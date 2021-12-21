@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <script>
+    // 변수를 선언합니다
+    const date = new Date();
+    const hour = date.getHours();
+
+    // 조건문
+    switch (true) {
+      case hour < 11:
+        alert('아침 먹을 시작입니다.');
+        break;
+      case hour < 15:
+        alert('점심 먹을 시작입니다.');
+        break;
+      default:
+        alert('저녁 먹을 시각입니다.');
+        break;
+    }
+
+  </script>
+</body>
+
+</html>
