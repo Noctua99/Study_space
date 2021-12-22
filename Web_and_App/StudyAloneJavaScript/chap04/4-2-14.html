@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <script>
+    let output = '';
+
+    for (let i = 1; i <= 14; i++) {
+      for (let j = 1; j <= 14 - i; j++) {
+        output += ' ';
+      }
+      for (let j = 1; j <= i * 2 - 1; j++) {
+        output += '*';
+      }
+      output += '\n';
+    }
+
+    console.log(output);
+  </script>
+</body>
+
+</html>
