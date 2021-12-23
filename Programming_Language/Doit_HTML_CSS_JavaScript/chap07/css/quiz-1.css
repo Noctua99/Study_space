@@ -1,0 +1,16 @@
+.container {
+  width:500px;
+  padding:10px;
+  border:1px solid #CCC;
+}
+.subject {
+  font-weight:700;
+  font-size:larger;
+  color: #ad3000;
+}
+ul{
+  list-style-type: none;
+}
+li{
+  line-height: 2.0;
+}

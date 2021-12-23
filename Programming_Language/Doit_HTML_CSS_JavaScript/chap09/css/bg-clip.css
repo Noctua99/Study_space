@@ -1,0 +1,17 @@
+#clip-border{
+  background-clip: border-box;
+}
+#clip-padding{
+  background-clip: padding-box;
+}
+#clip-content{
+  background-clip: content-box;
+}
+.desc{
+  border: 5px dotted #000;
+  background-color: #ffd9a0;
+  width: 350px;
+  padding: 20px;
+  margin-right: 20px;
+  float: left;
+}

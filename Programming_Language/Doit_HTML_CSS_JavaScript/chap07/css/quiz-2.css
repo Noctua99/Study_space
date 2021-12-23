@@ -1,0 +1,12 @@
+.container {
+  width:300px;
+  height:70px;     
+  margin:0 auto;
+  background-color:#444;        
+}    
+h1 {
+  text-align: center;
+  line-height: 70px;
+  color: #FFF;
+  text-shadow: 3px 2px 5px #000;
+}

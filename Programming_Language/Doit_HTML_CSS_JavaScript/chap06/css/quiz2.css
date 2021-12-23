@@ -1,0 +1,13 @@
+#container{
+  width: 600px;
+  margin: 20px auto;
+}
+h1{
+  display: inline-block;
+  background-color: #0404aa;
+  color: #fff;
+}
+.accent{
+  font-weight: bold;
+  color: red;
+}

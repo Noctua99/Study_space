@@ -1,0 +1,11 @@
+.box1 {
+  width: 400px;
+  height: 100px;
+}
+.box2 {
+  width: 50%;
+  height: 100px;
+}
+div {
+  border: 1px solid #000;
+}
