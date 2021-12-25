@@ -17,7 +17,6 @@ public class InsertionSortExample {
             for (int j = i; j > 0; j--) {
                 if (arr[j - 1] > arr[j]) {
                     swap(arr, j - 1, j);
-                    System.out.println(Arrays.toString(arr));
                 } else {
                     break;
                 }
