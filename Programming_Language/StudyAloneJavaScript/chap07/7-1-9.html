@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOMContentLoaded</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const divA = document.querySelector('#first');
+      const divB = document.querySelector('#second');
+      const h1 = document.createElement('h1');
+      h1.textContent = '이동하는 h1 태그';
+
+      const toFirst = () => {
+        divA.appendChild(h1);
+        setTimeout(toSecond, 1000);
+      }
+      const toSecond = () => {
+        divB.appendChild(h1);
+        setTimeout(toFirst, 1000);
+      }
+      toFirst();
+    })
+  </script>
+</head>
+
+<body>
+  <div id="first">
+    <h1>첫 번째 div 태그 내부</h1>
+  </div>
+  <hr>
+  <div id="second">
+    <h1>두 번째 div 태그 내부</h1>
+  </div>
+</body>
+
+</html>

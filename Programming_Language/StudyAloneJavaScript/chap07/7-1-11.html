@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOMContentLoaded</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let counter = 0;
+      const h1 = document.querySelector('h1');
+
+      h1.addEventListener('click', (event) => {
+        counter++;
+        h1.textContent = `클릭 횟수: ${counter}`;
+      })
+    })
+  </script>
+  <style>
+    h1 {
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>클릭 횟수: 0</h1>
+</body>
+
+</html>
