@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOMContentLoaded</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let [timer, timerId] = [0, 0];
+      const h1 = document.querySelector('h1');
+      const checkbox = document.querySelector('input');
+
+      checkbox.addEventListener('change', (event) => {
+        if (event.currentTarget.checked) {
+          timerId = setInterval(() => {
+            timer += 1;
+            h1.textContent = `${timer}초`;
+          }, 1000);
+        } else {
+          clearInterval(timerId);
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <input type="checkbox">
+  <span>타이머 활성화</span>
+  <h1>0초</h1>
+</body>
+
+</html>

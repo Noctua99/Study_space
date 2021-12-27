@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOMContentLoaded</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let [timer, timerId] = [0, 0];
+      const h1 = document.querySelector('h1');
+      const checkbox = document.querySelector('input');
+      const button = document.querySelector('button');
+
+      checkbox.addEventListener('change', (event) => {
+        if (event.currentTarget.checked) {
+          timerId = setInterval(() => {
+            timer += 0.01;
+            h1.textContent = `${timer.toFixed(2)}초`;
+          }, 10);
+        } else {
+          clearInterval(timerId);
+        }
+      });
+
+      button.addEventListener('click', () => {
+        timer = 0;
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <input type="checkbox">
+  <span>타이머 활성화</span>
+  <button>초기화</button>
+  <h1></h1>
+</body>
+
+</html>
