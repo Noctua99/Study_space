@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <!-- 리액트 사용 준비 -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- 리액트를 사용하는 코드 입력 -->
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          input: 0,
+          output: 0,
+          scale: 10
+        }
+        this.handleInput = this.handleInput.bind(this);
+        this.handleSelect = this.handleSelect.bind(this);
+      }
+
+      handleInput(event) {
+        const output = (event.target.value * this.state.scale).toFixed(2)
+        this.setState({
+          input: event.target.value,
+          output: output
+        });
+      }
+
+      handleSelect(event) {
+        const output = (this.state.input * event.target.value).toFixed(2)
+        this.setState({
+          scale: event.target.value,
+          output: output
+        });
+      }
+
+      render() {
+        return <div>
+          <input
+            value={this.state.input}
+            onChange={this.handleInput} />
+          <span>cm = {this.state.output}</span>
+          <select value={this.state.value} onChange={this.handleSelect}>
+            <option defaultValue value={10}>mm</option>
+            <option value={0.01}>m</option>
+            <option value={0.393701}>inch</option>
+          </select>
+        </div>
+      }
+    }
+
+    const container = document.getElementById('root');
+    ReactDOM.render(<App />, container);
+  </script>
+</body>
+
+</html>
