@@ -2,7 +2,7 @@ package com.example.demo;
 
 import lombok.Builder;
 import lombok.NonNull;
-import lombok.RequireArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 @Builder
 @RequiredArgsConstructor
