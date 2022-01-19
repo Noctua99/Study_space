@@ -37,7 +37,7 @@ public class TestController {
         return "Hello World! ID " + testRequestBodyDTO.getId() + " Message : " + testRequestBodyDTO.getMessage();
     }
 
-    @GetMapping("/testResponseBody")
+    @GetMapping("/testResponseBody") 
     public ResponseDTO<String> testControllerResponseBody() {
         List<String> list = new ArrayList<>();
         list.add("Hello World! I'm ResponseDTO");
