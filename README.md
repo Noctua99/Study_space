@@ -41,6 +41,7 @@
 
 ### Spring Boot Tutorial | Full Course [2021] [22.02.12~22.02.15]
 ### Test Driven Development (TDD) | Crash Course | 2020 [22.02.15~22.02.16]
+### Java Functional Programming | Full Course [22.02.16~22.02.21]
 
 ## 📕 Book
 
